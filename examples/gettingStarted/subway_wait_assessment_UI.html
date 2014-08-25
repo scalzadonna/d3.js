@@ -131,7 +131,7 @@
         g.selectAll('circle')
             .on('mouseover', function(d){
                 d3.select(this)
-                    .transition().attr('r', 9)
+                    .transition().attr('r', 10)
             })
             .on('mouseout', function(d,i){
                 if (i !== data.length-1) {
@@ -152,9 +152,9 @@
             .on('mouseout.tooltip', function(d){
                 d3.select("text." + d.line_id)
                     .transition()
-                    .duration(500)
+                    .duration(1000)
                     .style('opacity',0)
-                    .attr('transform','translate(10, -10)')
+                    .attr('transform','translate(20, -20)')
                     .remove()
             })
     }
